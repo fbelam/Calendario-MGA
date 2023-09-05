@@ -1,5 +1,5 @@
 :root{
-    --primary-cir: #1E8449
+    --primary-cir: #008000
 }
 *
 {
@@ -13,7 +13,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 30px;
     background-color: white;
 }
 .container{
@@ -28,7 +27,7 @@ body{
     background-color: #7e9385;
 }
 .left{
-    width: 60%;
+    width: 80%;
     padding: 20%;
 }
 .calendar{
@@ -45,23 +44,25 @@ body{
 }
 .calendar::before,
 .calendar::after{
-    content: "";
+    content: '';
     position: absolute;
-    top: 50%;
+    top: 1%;
     left: 100%;
     width: 12px;
+    height: 97%;
     border-radius: 0 5px 5px 0;
-    background-color: #d3d5d6d7;
-    transform: translateY(-50);
+    background-color: #d3d5d6d7 ;
+    transform: translateY(-50);    
 }
-.calendar::before {
+.calendar::before{
     height: 94%;
+    margin-top: 20px;
     left: calc(100% + 12px);
     background-color: rgb(153, 153, 153);
 }
 .calendar .month {
     width: 100%;
-    height: 15px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,7 +81,7 @@ body{
 }
 .calendar .weekdays {
     width: 100%;
-    height: 100%;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,13 +91,13 @@ body{
     text-transform: capitalize;
 }
 .calendar .weekdays div{
-    width: 14.28;
+    width: 14.28%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.calendar .days{
+.calendar .days {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -107,7 +108,7 @@ body{
     margin-bottom: 20px;
 }
 .calendar .days .day{
-    width: 14.28;
+    width:  14.28%;
     height: 90px;
     display: flex;
     align-items: center;
@@ -116,15 +117,15 @@ body{
     color: var(--primary-cir);
     border: 1px solid #f5f5f5;
 }
-.calendar .day:not(.prev-date , .next-date):hover{
-    color: #fff;
+.calendar .day:not(.prev-date, .next-date):hover{
+    color:#fff;
     background-color: var(--primary-cir);
 }
 .calendar .days .prev-date,
 .calendar .days .next-date{
     color: #b3b3b3;
 }
-.calendar .days .active {
+.calendar .days .active{
     position: relative;
     font-size: 2rem;
     color: #fff;
@@ -135,13 +136,13 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     box-shadow: 0 0 10px 2px var(--primary-cir);
 }
 .calendar .days .today{
-    font-size: 2rem;    
-}
+    font-size: 2rem;
+}  
 .calendar .days .event{
     position: relative;
 }
@@ -151,17 +152,7 @@ body{
     bottom: 10%;
     left: 50%;
     width: 75%;
+    height: 6px;
     border-radius: 30px;
-    transform: translateX(-50%);
-    background-color: var(--primary-cir);
-}
-.calendar .day:hover::after{
-    background-color: #fff;
-}
-.calendar .active.event::after{
-    background-color: #fff;
-    bottom: 20%;
-}
-.calendar .active.event{
-
+    transform: translateX(-50%;
 }
