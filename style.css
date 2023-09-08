@@ -24,11 +24,11 @@ body{
     color: #fff;
     display: flex;
     border-radius: 10px;
-    background-color: #087029;
+    background-color: #324533;
 }
 .left{
-    width: 90%;
-    padding: 20%;
+    width: 50%;
+    padding: 1%;
 }
 .calendar{
     position: relative;
@@ -191,7 +191,7 @@ body{
     color: var(--primary-cir);
     border-radius: 5px;
 }
-.calendar .goto-today .button {
+.calendar .goto-today button {
     padding: 5px 10px;
     border: 1px solid var(--primary-cir);
     border-radius: 5px;
