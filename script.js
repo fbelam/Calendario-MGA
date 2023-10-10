@@ -130,4 +130,29 @@ dateInput.addEventListener("input", (e) => {
         //não permitir mais de 7 caracteres
         dateInput.value = dateInput.value.slice(0, 7);
     }
-})
+    //if backspace pressed
+    if(e.inputType === "deleteContentBack") {
+        if(dateInput.value.length === 3) {
+            dateInput.value = dateInput.value.slice(0, 2);
+        }
+    }
+});
+
+gotoBtn.addEventListener("click", gotoDate);
+
+//function to go entered date
+
+function gotoDate() {
+    const dateArr = dateInput.value.split("/");
+    //some date valition
+    if (dateArr.length === 2) {
+        if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4){
+            month = dateArr[0] -1;
+            year = dateArr[1];
+            initCalendar();
+            return; 
+        }
+    }
+    // se a data for invalida
+    alert("invalide date");
+}
